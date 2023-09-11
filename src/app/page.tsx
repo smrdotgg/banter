@@ -1,5 +1,7 @@
 "use client";
 
+import LeftBar from "@/components/signed_in/left_bar";
+import { Button } from "@/components/ui/button";
 import { trpc } from "@/utils/trpc";
 import {
   SignIn,
@@ -42,14 +44,9 @@ function SignedInView() {
   return (
     <>
       <SignedIn>
-        You are signed in!
-        <Image
-          src={data.data!.imageUrl}
-          alt={"Profile Picture"}
-          width={100}
-          height={100}
-        />
-        <button onClick={(_) => signOut()} className="bg-white hover:bg-slate-100 text-black p-1 m-1 rounded"> Signout </button>
+        <div className="h-screen w-screen max-h-screen flex bg-slate-700">
+          <LeftBar />
+        </div>
       </SignedIn>
     </>
   );
