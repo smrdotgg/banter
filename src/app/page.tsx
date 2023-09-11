@@ -44,8 +44,10 @@ function SignedInView() {
   return (
     <>
       <SignedIn>
-        <div className="h-screen w-screen max-h-screen flex bg-slate-700">
-          <LeftBar />
+        <div className="h-screen w-screen max-h-screen dark">
+          <div className="h-screen w-screen max-h-screen flex bg-slate-700 text-black dark:text-slate-200">
+            <LeftBar />
+          </div>
         </div>
       </SignedIn>
     </>

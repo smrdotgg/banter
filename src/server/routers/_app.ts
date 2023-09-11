@@ -26,6 +26,7 @@ export const appRouter = router({
     const user = await clerkClient.users.getUser(opts.ctx.userId);
     return {
       imageUrl: user.imageUrl,
+      username: user.username,
     };
     // return user;
   }),
